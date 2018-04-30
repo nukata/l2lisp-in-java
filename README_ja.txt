@@ -1,4 +1,4 @@
-Little Lazy Lisp 9.3 in Java                             H30.4/8 (鈴)
+Little Lazy Lisp 9.4 in Java                             H30.4/30 (鈴)
 
 これは Java による小さな Lisp インタープリタです。
 
@@ -44,7 +44,7 @@ $ javac -encoding utf-8 l2lisp/example/Extension.java
 $ jar cfm l2lisp.jar l2lisp/Manifest l2lisp/Copyright.txt l2lisp/Prelude.l l2lisp/*.class l2lisp/*/*.class
 
 をしてください。Java 本体以外に必要なライブラリ等はありません。Mac 上の
-Java 1.6.0_65 と 1.8.0_152 で試していますが，他の Java も使えるはずです。
+Java 6u65, 8u152, 10.0.1 で試していますが，他の Java も使えるはずです。
 
 上記 jar コマンド行から分かるように，Lisp 初期化スクリプトを含め必要な
 ファイル一式を l2lisp.jar に含めています。実行に必要なのは l2lisp.jar

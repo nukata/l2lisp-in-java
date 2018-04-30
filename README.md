@@ -3,7 +3,7 @@
 This is an experimental Lisp interpreter I wrote 8 years ago (2010) in Java.
 It had been presented under the MIT License at 
 <http://www.oki-osk.jp/esc/llsp/v9.html> until last spring (2017).
-Now I have slightly modified it to resolve warnings issued by Java 8.
+Now I have slightly modified it to resolve warnings issued by Java 8 and 10.
 
 - It has almost the same features as
   [l2lisp-in-python](https://github.com/nukata/l2lisp-in-python) has.

@@ -1,4 +1,4 @@
-// H22.8/17, H30.4/8 (鈴)
+// H22.8/17, H30.4/8, H30.4/30 (鈴)
 package l2lisp;
 
 import java.io.*;
@@ -565,7 +565,7 @@ public class LispReader implements Closeable
         } catch (NumberFormatException ex) {}
         if (radix == 10) {
             try {
-                return new Double (s);
+                return Double.valueOf(s); // new Double(s) は deprecated
             } catch (NumberFormatException ex) {}
         }
         return null;

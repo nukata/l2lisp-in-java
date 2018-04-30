@@ -1,4 +1,4 @@
-// H22.8/17, H30.4/8 (鈴)
+// H22.8/17, H30.4/8, H30.4/30 (鈴)
 package l2lisp;
 
 import java.io.*;
@@ -13,7 +13,7 @@ public class LL
     private LL () {}
 
     /** L2 Lisp のバージョン */
-    public static final double VERSION = 9.3;
+    public static final double VERSION = 9.4;
 
     /** 初期化 Lisp スクリプト名 */
     public static String PRELUDE = "Prelude.l";
