@@ -38,10 +38,28 @@ $
 You can give it a file name of your Lisp script.
 
 ```
+$ cat -n fibs.l
+     1  ;; from Haskell
+     2  (defun zipWith (f x y)
+     3    (if (or (null x)
+     4            (null y)) nil
+     5      (cons (f (car x) (car y))
+     6            ~(zipWith f (cdr x) (cdr y)))))
+     7  
+     8  (setq fibs
+     9        (cons 1 (cons 1 ~(zipWith + fibs (cdr fibs)))))
+    10  
+    11  (print (nth 33 fibs))                   ; => 5702887
 $ java -jar l2lisp.jar fibs.l
 5702887
 $
 ```
+
+**Note:** `~expression` is equivalent to `(delay expression)`.
+This Lisp implements _"implicit forcing"_.
+See [R5RS](http://www.schemers.org/Documents/Standards/R5RS/)
+for `delay` and "implicit forcing".
+They allow you lazy evaluation à la Haskell in Lisp.
 
 If you put a "`-`" after the file name, it will 
 begin an interactive session after running the file.
